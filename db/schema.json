@@ -1,6 +1,6 @@
 {
 
-  "migration_id": 2016122702553019,
+  "migration_id": 2016122703312268,
 
   "models": {
 
@@ -21,6 +21,24 @@
 
     },
 
+    "Message": {
+
+      "table": "messages",
+
+      "columns": [
+        {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
+        {"name": "from_id", "type": "int", "properties": {}},
+        {"name": "from_username", "type": "string", "properties": {}},
+        {"name": "from_first_name", "type": "string", "properties": {}},
+        {"name": "from_last_name", "type": "string", "properties": {}},
+        {"name": "body", "type": "string", "properties": {}},
+        {"name": "room_id", "type": "int", "properties": {}},
+        {"name": "created_at", "type": "datetime", "properties": {}},
+        {"name": "updated_at", "type": "datetime", "properties": {}}
+      ]
+
+    },
+
     "User": {
 
       "table": "users",
@@ -30,6 +48,9 @@
         {"name": "email", "type": "string", "properties": {"unique":true}},
         {"name": "password", "type": "string", "properties": {}},
         {"name": "username", "type": "string", "properties": {}},
+        {"name": "last_name", "type": "string", "properties": {}},
+        {"name": "first_name", "type": "string", "properties": {}},
+        {"name": "category", "type": "string", "properties": {}},
         {"name": "created_at", "type": "datetime", "properties": {}},
         {"name": "updated_at", "type": "datetime", "properties": {}}
       ]

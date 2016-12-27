@@ -5,16 +5,24 @@
       {
         "email": "admin@gmail.com",
         "username": "admin1",
+        "first_name": "Admin",
+        "first_name": "Representative",
         "password": "password"
       },
       {
         "email": "test@test.com",
         "username": "testing2",
+        "first_name": "David",
+        "last_name": "Whelsh",
+        "category": "renewal",
         "password": "password"
       },
       {
         "email": "test2@test.com",
         "username": "testing3",
+        "first_name": "David",
+        "last_name": "Whelsh",
+        "category": "transfer",
         "password": "password"
       }
     ],
