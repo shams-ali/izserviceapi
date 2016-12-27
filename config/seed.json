@@ -6,7 +6,7 @@
         "email": "admin@gmail.com",
         "username": "admin1",
         "first_name": "Admin",
-        "first_name": "Representative",
+        "last_name": "Representative",
         "password": "password"
       },
       {
@@ -80,6 +80,82 @@
 
   "test": {},
 
-  "production": {}
+  "production": {
+    "User": [
+      {
+        "email": "admin@gmail.com",
+        "username": "admin1",
+        "first_name": "Admin",
+        "last_name": "Representative",
+        "password": "password"
+      },
+      {
+        "email": "test@test.com",
+        "username": "testing2",
+        "first_name": "David",
+        "last_name": "Whelsh",
+        "category": "renewal",
+        "password": "password"
+      },
+      {
+        "email": "test2@test.com",
+        "username": "testing3",
+        "first_name": "David",
+        "last_name": "Whelsh",
+        "category": "transfer",
+        "password": "password"
+      }
+    ],
+    "Vehicle": [
+      {
+        "user_id": 2,
+        "vin": "thisIsVin2-1",
+        "plate": "thisIsPlate2-1",
+        "make": "thisIsMake2-1",
+        "model": "thisIsModel2-1",
+        "year": "thisIsYear2-1"
+      },
+      {
+        "user_id": 2,
+        "vin": "thisIsVin2-2",
+        "plate": "thisIsPlate2-2",
+        "make": "thisIsMake2-2",
+        "model": "thisIsModel2-2",
+        "year": "thisIsYear2-2"
+      },
+      {
+        "user_id": 2,
+        "vin": "thisIsVin2-3",
+        "plate": "thisIsPlate2-3",
+        "make": "thisIsMake2-3",
+        "model": "thisIsModel2-3",
+        "year": "thisIsYear2-3"
+      },
+      {
+        "user_id": 3,
+        "vin": "thisIsVin3-1",
+        "plate": "thisIsPlate3-1",
+        "make": "thisIsMake3-1",
+        "model": "thisIsModel3-1",
+        "year": "thisIsYear3-1"
+      },
+      {
+        "user_id": 3,
+        "vin": "thisIsVin3-2",
+        "plate": "thisIsPlate3-2",
+        "make": "thisIsMake3-2",
+        "model": "thisIsModel3-2",
+        "year": "thisIsYear3-2"
+      },
+      {
+        "user_id": 3,
+        "vin": "thisIsVin3-3",
+        "plate": "thisIsPlate3-3",
+        "make": "thisIsMake3-3",
+        "model": "thisIsModel3-3",
+        "year": "thisIsYear3-3"
+      }
+    ]
+  }
 
 }
