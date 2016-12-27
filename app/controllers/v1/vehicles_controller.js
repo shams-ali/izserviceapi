@@ -8,11 +8,11 @@ class V1VehiclesController extends Nodal.Controller {
   index() {
     console.log(Vehicle.query())
     Vehicle.query()
-      .where(this.params.query)
       .join('user')
+      .where(this.params.query)
       .end((err, models) => {
 
-        this.respond(err || models, ['id', 'created_at', 'user']);
+        this.respond(err || models, ['id', 'vin', 'plate', 'make', 'model', 'year', 'created_at', 'user']);
 
       });
 

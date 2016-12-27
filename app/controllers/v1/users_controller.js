@@ -2,18 +2,22 @@
 
 const Nodal = require('nodal');
 const User = Nodal.require('app/models/user.js');
+const AuthController = Nodal.require('app/controllers/auth_controller.js')
 
-class V1UsersController extends Nodal.Controller {
+class V1UsersController extends AuthController {
 
   index() {
 
-    User.query()
-      .where(this.params.query)
-      .end((err, models) => {
+    this.authorize((accessToken, user) => {
+      console.log('before query');
+      User.query()
+        .where(this.params.query)
+        .end((err, models) => {
+          console.log('inside a query');
+          this.respond(err || models);
 
-        this.respond(err || models);
-
-      });
+        });
+    })
 
   }
 
@@ -38,11 +42,14 @@ class V1UsersController extends Nodal.Controller {
   }
 
   update() {
+    
+    this.authorize((accessToken, user) => {
 
-    User.update(this.params.route.id, this.params.body, (err, model) => {
+      User.update(user._data.id, this.params.body, (err, model) => {
 
-      this.respond(err || model);
+        this.respond(err || model);
 
+      });
     });
 
   }
